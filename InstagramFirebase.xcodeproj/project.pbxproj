@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C41E99A1210F8D570036FF12 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41E99A0210F8D570036FF12 /* Extensions.swift */; };
 		C47B766D210B10BF003DEDC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47B766C210B10BF003DEDC6 /* AppDelegate.swift */; };
 		C47B766F210B10BF003DEDC6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47B766E210B10BF003DEDC6 /* ViewController.swift */; };
 		C47B7672210B10BF003DEDC6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C47B7670210B10BF003DEDC6 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C41E99A0210F8D570036FF12 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		C47B7669210B10BF003DEDC6 /* InstagramFirebase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramFirebase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C47B766C210B10BF003DEDC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C47B766E210B10BF003DEDC6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,6 +37,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C41E999F210F8D430036FF12 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				C41E99A0210F8D570036FF12 /* Extensions.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		C47B7660210B10BF003DEDC6 = {
 			isa = PBXGroup;
 			children = (
@@ -54,6 +64,7 @@
 		C47B766B210B10BF003DEDC6 /* InstagramFirebase */ = {
 			isa = PBXGroup;
 			children = (
+				C41E999F210F8D430036FF12 /* Utils */,
 				C47B766C210B10BF003DEDC6 /* AppDelegate.swift */,
 				C47B766E210B10BF003DEDC6 /* ViewController.swift */,
 				C47B7670210B10BF003DEDC6 /* Main.storyboard */,
@@ -137,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C47B766F210B10BF003DEDC6 /* ViewController.swift in Sources */,
+				C41E99A1210F8D570036FF12 /* Extensions.swift in Sources */,
 				C47B766D210B10BF003DEDC6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
