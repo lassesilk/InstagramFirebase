@@ -11,10 +11,14 @@
 		C41E99A1210F8D570036FF12 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41E99A0210F8D570036FF12 /* Extensions.swift */; };
 		C41E99A3210F95DA0036FF12 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C41E99A2210F95D90036FF12 /* GoogleService-Info.plist */; };
 		C47B766D210B10BF003DEDC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47B766C210B10BF003DEDC6 /* AppDelegate.swift */; };
-		C47B766F210B10BF003DEDC6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47B766E210B10BF003DEDC6 /* ViewController.swift */; };
+		C47B766F210B10BF003DEDC6 /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47B766E210B10BF003DEDC6 /* SignUpController.swift */; };
 		C47B7672210B10BF003DEDC6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C47B7670210B10BF003DEDC6 /* Main.storyboard */; };
 		C47B7674210B10BF003DEDC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C47B7673210B10BF003DEDC6 /* Assets.xcassets */; };
 		C47B7677210B10BF003DEDC6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C47B7675210B10BF003DEDC6 /* LaunchScreen.storyboard */; };
+		C48EA42E21107B3B0006BC15 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48EA42D21107B3B0006BC15 /* MainTabBarController.swift */; };
+		C48EA43021107BE40006BC15 /* UserProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48EA42F21107BE40006BC15 /* UserProfileController.swift */; };
+		C48EA4332110925D0006BC15 /* UserProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48EA4322110925D0006BC15 /* UserProfileHeader.swift */; };
+		C48EA4362110C4EB0006BC15 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48EA4352110C4EB0006BC15 /* LoginController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,11 +29,15 @@
 		C41E99A2210F95D90036FF12 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C47B7669210B10BF003DEDC6 /* InstagramFirebase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramFirebase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C47B766C210B10BF003DEDC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C47B766E210B10BF003DEDC6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C47B766E210B10BF003DEDC6 /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
 		C47B7671210B10BF003DEDC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C47B7673210B10BF003DEDC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C47B7676210B10BF003DEDC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C47B7678210B10BF003DEDC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C48EA42D21107B3B0006BC15 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		C48EA42F21107BE40006BC15 /* UserProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileController.swift; sourceTree = "<group>"; };
+		C48EA4322110925D0006BC15 /* UserProfileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileHeader.swift; sourceTree = "<group>"; };
+		C48EA4352110C4EB0006BC15 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,9 +89,11 @@
 		C47B766B210B10BF003DEDC6 /* InstagramFirebase */ = {
 			isa = PBXGroup;
 			children = (
+				C48EA4342110C4E20006BC15 /* Login */,
+				C48EA4312110924E0006BC15 /* UserProfile */,
 				C41E999F210F8D430036FF12 /* Utils */,
 				C47B766C210B10BF003DEDC6 /* AppDelegate.swift */,
-				C47B766E210B10BF003DEDC6 /* ViewController.swift */,
+				C48EA42D21107B3B0006BC15 /* MainTabBarController.swift */,
 				C47B7670210B10BF003DEDC6 /* Main.storyboard */,
 				C47B7673210B10BF003DEDC6 /* Assets.xcassets */,
 				C47B7675210B10BF003DEDC6 /* LaunchScreen.storyboard */,
@@ -91,6 +101,24 @@
 				C41E99A2210F95D90036FF12 /* GoogleService-Info.plist */,
 			);
 			path = InstagramFirebase;
+			sourceTree = "<group>";
+		};
+		C48EA4312110924E0006BC15 /* UserProfile */ = {
+			isa = PBXGroup;
+			children = (
+				C48EA42F21107BE40006BC15 /* UserProfileController.swift */,
+				C48EA4322110925D0006BC15 /* UserProfileHeader.swift */,
+			);
+			path = UserProfile;
+			sourceTree = "<group>";
+		};
+		C48EA4342110C4E20006BC15 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				C48EA4352110C4EB0006BC15 /* LoginController.swift */,
+				C47B766E210B10BF003DEDC6 /* SignUpController.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		D01ACDAF3EAA7A18BE2A2C83 /* Pods */ = {
@@ -238,9 +266,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C47B766F210B10BF003DEDC6 /* ViewController.swift in Sources */,
+				C47B766F210B10BF003DEDC6 /* SignUpController.swift in Sources */,
 				C41E99A1210F8D570036FF12 /* Extensions.swift in Sources */,
+				C48EA42E21107B3B0006BC15 /* MainTabBarController.swift in Sources */,
+				C48EA4332110925D0006BC15 /* UserProfileHeader.swift in Sources */,
+				C48EA43021107BE40006BC15 /* UserProfileController.swift in Sources */,
 				C47B766D210B10BF003DEDC6 /* AppDelegate.swift in Sources */,
+				C48EA4362110C4EB0006BC15 /* LoginController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
