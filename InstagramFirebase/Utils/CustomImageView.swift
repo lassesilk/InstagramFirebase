@@ -18,6 +18,9 @@ class CustomImageView: UIImageView {
         
         lastURLUsedToLoadImage = urlString
         
+        //fix flickering with images
+        self.image = nil
+        
         if let cachedImage = imageCache[urlString] {
             self.image = cachedImage
             return
