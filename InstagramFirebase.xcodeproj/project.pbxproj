@@ -10,6 +10,7 @@
 		5260F5DD9F372CDF2ADE5931 /* Pods_InstagramFirebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 563F55F387BD8681D4F9A4A6 /* Pods_InstagramFirebase.framework */; };
 		C41E99A1210F8D570036FF12 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41E99A0210F8D570036FF12 /* Extensions.swift */; };
 		C41E99A3210F95DA0036FF12 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C41E99A2210F95D90036FF12 /* GoogleService-Info.plist */; };
+		C422E6282114201A0020FA10 /* CameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C422E6272114201A0020FA10 /* CameraController.swift */; };
 		C47B766D210B10BF003DEDC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47B766C210B10BF003DEDC6 /* AppDelegate.swift */; };
 		C47B766F210B10BF003DEDC6 /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47B766E210B10BF003DEDC6 /* SignUpController.swift */; };
 		C47B7672210B10BF003DEDC6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C47B7670210B10BF003DEDC6 /* Main.storyboard */; };
@@ -28,6 +29,7 @@
 		C48EA446211237900006BC15 /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48EA445211237900006BC15 /* CustomImageView.swift */; };
 		C48EA44921123E150006BC15 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48EA44821123E150006BC15 /* HomeController.swift */; };
 		C48EA44B21123EDB0006BC15 /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48EA44A21123EDB0006BC15 /* HomeCell.swift */; };
+		C4D4770C2118E41B002FF545 /* PreviewPhotoContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D4770B2118E41B002FF545 /* PreviewPhotoContainerView.swift */; };
 		C4FEEFFB21135FFB00BFA2E3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FEEFFA21135FFB00BFA2E3 /* User.swift */; };
 		C4FEEFFD211364DD00BFA2E3 /* FirebaseUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FEEFFC211364DD00BFA2E3 /* FirebaseUtils.swift */; };
 		C4FEF0012113743B00BFA2E3 /* UserSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FEF0002113743B00BFA2E3 /* UserSearchController.swift */; };
@@ -40,6 +42,7 @@
 		7F8F488994EF19B877F4BB40 /* Pods-InstagramFirebase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramFirebase.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InstagramFirebase/Pods-InstagramFirebase.debug.xcconfig"; sourceTree = "<group>"; };
 		C41E99A0210F8D570036FF12 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		C41E99A2210F95D90036FF12 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C422E6272114201A0020FA10 /* CameraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraController.swift; sourceTree = "<group>"; };
 		C47B7669210B10BF003DEDC6 /* InstagramFirebase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramFirebase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C47B766C210B10BF003DEDC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C47B766E210B10BF003DEDC6 /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
@@ -60,6 +63,7 @@
 		C48EA445211237900006BC15 /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
 		C48EA44821123E150006BC15 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		C48EA44A21123EDB0006BC15 /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
+		C4D4770B2118E41B002FF545 /* PreviewPhotoContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewPhotoContainerView.swift; sourceTree = "<group>"; };
 		C4FEEFFA21135FFB00BFA2E3 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C4FEEFFC211364DD00BFA2E3 /* FirebaseUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUtils.swift; sourceTree = "<group>"; };
 		C4FEF0002113743B00BFA2E3 /* UserSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSearchController.swift; sourceTree = "<group>"; };
@@ -96,6 +100,15 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		C422E6262114200F0020FA10 /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				C422E6272114201A0020FA10 /* CameraController.swift */,
+				C4D4770B2118E41B002FF545 /* PreviewPhotoContainerView.swift */,
+			);
+			path = Camera;
+			sourceTree = "<group>";
+		};
 		C47B7660210B10BF003DEDC6 = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +130,7 @@
 		C47B766B210B10BF003DEDC6 /* InstagramFirebase */ = {
 			isa = PBXGroup;
 			children = (
+				C422E6262114200F0020FA10 /* Camera */,
 				C4FEEFFF211373F100BFA2E3 /* Search */,
 				C48EA44721123E0B0006BC15 /* Home */,
 				C48EA440211225550006BC15 /* Models */,
@@ -346,12 +360,14 @@
 				C48EA446211237900006BC15 /* CustomImageView.swift in Sources */,
 				C4FEF0012113743B00BFA2E3 /* UserSearchController.swift in Sources */,
 				C48EA442211225610006BC15 /* Post.swift in Sources */,
+				C422E6282114201A0020FA10 /* CameraController.swift in Sources */,
 				C41E99A1210F8D570036FF12 /* Extensions.swift in Sources */,
 				C4FEEFFB21135FFB00BFA2E3 /* User.swift in Sources */,
 				C48EA4442112273C0006BC15 /* UserProfilePhotoCell.swift in Sources */,
 				C48EA42E21107B3B0006BC15 /* MainTabBarController.swift in Sources */,
 				C48EA4332110925D0006BC15 /* UserProfileHeader.swift in Sources */,
 				C48EA43021107BE40006BC15 /* UserProfileController.swift in Sources */,
+				C4D4770C2118E41B002FF545 /* PreviewPhotoContainerView.swift in Sources */,
 				C47B766D210B10BF003DEDC6 /* AppDelegate.swift in Sources */,
 				C48EA4362110C4EB0006BC15 /* LoginController.swift in Sources */,
 				C48EA43D21120A6A0006BC15 /* PhotoSelectorHeader.swift in Sources */,
