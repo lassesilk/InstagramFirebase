@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLayout
+class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLayout, HomeCellDelegate
 {
     
     var cellId = "cellId"
@@ -92,17 +92,30 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
                 
                 guard let dictionary = value as? [String: Any] else { return }
                 
-                let post = Post(user: user, dictionary: dictionary)
+                var post = Post(user: user, dictionary: dictionary)
+                post.id = key
                 
+                guard let uid = Auth.auth().currentUser?.uid else { return }
                 
-                self.posts.append(post)
+                Database.database().reference().child("likes").child(key).child(uid).observeSingleEvent(of: .value, with: { (snapshot) in
+                    
+                    if let value = snapshot.value as? Int, value == 1 {
+                        post.hasLiked = true
+                    } else {
+                        post.hasLiked = false
+                    }
+                    
+                    self.posts.append(post)
+                    self.posts.sort(by: { (p1, p2) -> Bool in
+                        return p1.creationDate.compare(p2.creationDate) == .orderedDescending
+                    })
+                    
+                     self.collectionView?.reloadData()
+                    
+                }, withCancel: { (err) in
+                    print("failed to fetch like info for post", err)
+                })
             })
-            self.posts.sort(by: { (p1, p2) -> Bool in
-                return p1.creationDate.compare(p2.creationDate) == .orderedDescending
-            })
-            
-            self.collectionView?.reloadData()
-            
         }) { (err) in
             print("failed to fetch posts", err)
         }
@@ -141,6 +154,42 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         
         cell.post = posts[indexPath.item]
         
+        cell.delegate = self
+        
         return cell
+    }
+    
+    func didTapComment(post: Post) {
+        
+        let commentsController = CommentsController(collectionViewLayout: UICollectionViewFlowLayout())
+        commentsController.post = post
+        navigationController?.pushViewController(commentsController, animated: true)
+    }
+    
+    func didLike(for cell: HomeCell) {
+        
+        guard let indexPath = collectionView?.indexPath(for: cell) else { return }
+        
+        var post = self.posts[indexPath.item]
+        
+        guard let postId = post.id else { return }
+        
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        
+        let values = [uid : post.hasLiked == true ? 0 : 1]
+        Database.database().reference().child("likes").child(postId).updateChildValues(values) { (err, _) in
+            if let err = err {
+                print("unable to upload likes", err)
+                return
+            }
+            
+            print("successfully liked post")
+            
+            post.hasLiked = !post.hasLiked
+            
+            self.posts[indexPath.item] = post
+            
+            self.collectionView?.reloadItems(at: [indexPath])
+        }
     }
 }
