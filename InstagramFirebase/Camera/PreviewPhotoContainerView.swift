@@ -77,7 +77,7 @@ class PreviewPhotoContainerView: UIView {
                         
                         savedLabel.layer.transform = CATransform3DMakeScale(0.1, 0.1, 0.1)
                         savedLabel.alpha = 0
-                        
+                    
                     }, completion: { (_) in
                         
                         savedLabel.removeFromSuperview()
